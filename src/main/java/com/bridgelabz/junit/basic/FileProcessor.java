@@ -7,6 +7,7 @@ public class FileProcessor {
     public void writeToFile(String filename, String content)throws IOException {
         BufferedWriter fileWrite = new BufferedWriter(new FileWriter(filename));
         fileWrite.write(content);
+        fileWrite.close();
     }
 
     public String readFromFile(String filename) throws IOException {
